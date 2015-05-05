@@ -709,3 +709,18 @@ a
         }
     }
 }
+
+@media screen and (max-height: 900px)
+{
+    .section1 .scroll
+    {
+        bottom: 0;
+    }
+}
+@media screen and (max-height: 810px)
+{
+    .section1 .scroll
+    {
+        display: none;
+    }
+}
