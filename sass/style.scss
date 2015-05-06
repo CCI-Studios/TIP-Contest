@@ -36,6 +36,16 @@ a
     font-weight: bold;
 }
 
+strong
+{
+    font-weight: 900;
+}
+
+.clearfix
+{
+    clear: both;
+}
+
 .page-wrapper
 {
     padding-top: 175px;
@@ -66,28 +76,69 @@ a
         }
     }
     
-    ul
+    .menu
     {
-        list-style: none;
-        float: right;
-        padding: 76px 0;
+        ul
+        {
+            list-style: none;
+            float: right;
+            padding: 76px 0;
+        }
+        li
+        {
+            list-style: none;
+            margin: 0 20px;
+            float: left;
+        }
+        a
+        {
+            color: #2f2e72;
+            font-weight: bold;
+            border-bottom: 1px solid #4591ce;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 3px;
+            
+            &:hover
+            {
+                color: #4591ce;
+            }
+        }
     }
-    li
+    .lang
     {
-        list-style: none;
-        margin: 0 20px;
-        float: left;
-    }
-    a
-    {
-        color: #2f2e72;
-        font-weight: bold;
-        border-bottom: 1px solid #4591ce;
-        text-decoration: none;
-        display: inline-block;
-        padding: 0 3px;
+        position: absolute;
+        top: 10px;
+        right: 40px;
+        font-size: 0.85em;
+        margin-right: -6px;
         
-        &:hover
+        ul
+        {
+            list-style: none;
+        }
+        li
+        {
+            list-style: none;
+            float: left;
+            padding: 0 6px;
+            line-height: 14px;
+        }
+        .first
+        {
+            border-right: 1px solid #666;
+        }
+        a
+        {
+            color: #666;
+            text-decoration: none;
+            
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+        .active a
         {
             color: #4591ce;
         }
@@ -116,7 +167,6 @@ a
         & > div
         {
             position: relative;
-            overflow: hidden;
         }
     }
     
@@ -197,38 +247,67 @@ a
         margin: 0 auto;
     }
     
+    &:before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -115px;
+        top: 200px;
+        width: 257px;
+        height: 322px;
+        background: url(../img/infographic-circles.png) no-repeat top left;
+    }
+    &:after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -150px;
+        top: 700px;
+        width: 284px;
+        height: 301px;
+        background: url(../img/infographic-circles2.png) no-repeat top left;
+    }
+    
     .infographic
     {
-        margin-top: -30px;
         text-align: center;
+        position: relative;
+        padding-bottom: 8%;
+        min-height: 480px;
         
-        &:before
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            left: -115px;
-            top: 200px;
-            width: 257px;
-            height: 322px;
-            background: url(../img/infographic-circles.png) no-repeat top left;
-        }
-        &:after
-        {
-            content: "";
-            display: block;
-            position: absolute;
-            right: -150px;
-            top: 700px;
-            width: 284px;
-            height: 301px;
-            background: url(../img/infographic-circles2.png) no-repeat top left;
-        }
-        
-        img
+        .map
         {
             max-width: 100%;
             height: auto;
+        }
+        .didyouknow
+        {
+            width: 45.2%;
+            min-width: 280px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            top: -8px;
+        }
+        .embarrassed
+        {
+            width: 47.5%;
+            min-width: 280px;
+            height: auto;
+            position: absolute;
+            left: 0;
+            bottom: 25%;
+        }
+        .sandals
+        {
+            width: 47.5%;
+            min-width: 280px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
     }
     
@@ -365,6 +444,10 @@ a
     p
     {
         font-size: 0.9em;
+    }
+    a
+    {
+        color: #4591ce;
     }
 }
 .rules
@@ -521,21 +604,24 @@ a
 {
     .header
     {
-        ul
+        .menu
         {
-            padding: 9px 0;
-            float: right;
-            margin-right: 100px;
-        }
-        li
-        {
-            float: none;
-            display: block;
-        }
-        a
-        {
-            margin: 8px 0;
-        }
+            ul
+            {
+                padding: 9px 0;
+                float: right;
+                margin-right: 100px;
+            }
+            li
+            {
+                float: none;
+                display: block;
+            }
+            a
+            {
+                margin: 8px 0;
+            }
+        }    
     }
     
     .section1
@@ -587,7 +673,7 @@ a
     }
     .header
     {
-        position: static;
+        position: relative;
     }
     .popup
     {
@@ -617,9 +703,16 @@ a
 {
     .header
     {
-        ul
+        .menu ul
         {
             margin-right: 0;
+        }
+        .lang
+        {
+            top: 10px;
+            right: auto;
+            left: 20px;
+            margin-left: -6px;
         }
     }
     .section1 .scroll
@@ -628,6 +721,11 @@ a
     }
     .section2
     {
+        .infographic .map
+        {
+            position: relative;
+            top: 125px;
+        }
         .guide
         {
             img
@@ -662,6 +760,48 @@ a
             width: auto;
         }
     }
+    .section2
+    {
+        .infographic
+        {
+            min-height: 0;
+            overflow: hidden;
+            padding-bottom: 0;
+            
+            .map
+            {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                left: 0;
+                top: 50%;
+                z-index: 0;
+            }
+            .didyouknow
+            {
+                position: relative;
+                z-index: 1;
+                float: right;
+                top: 0;
+            }
+            .embarrassed
+            {
+                position: relative;
+                z-index: 1;
+                float: left;
+            }
+            .sandals
+            {
+                position: relative;
+                z-index: 1;
+                float: right;
+            }
+        }
+        .guide p
+        {
+            padding: 0;
+        }
+    }
     .signup
     {
         input[type=text],
@@ -686,16 +826,21 @@ a
             float: none;
             text-align: center;
             line-height: 100px;
+            padding-top: 30px;
         }
-        ul
+        .menu
         {
-            float: none;
-            width: 140px;
-            margin: 0 auto;
-        }
-        li
-        {
-            margin: 0;
+            ul
+            {
+                float: none;
+                width: 140px;
+                margin: 0 auto;
+                padding-top: 0;
+            }
+            li
+            {
+                margin: 0;
+            }
         }
     }
     .signup
@@ -722,5 +867,10 @@ a
     .section1 .scroll
     {
         display: none;
+    }
+    .signup
+    {
+        top: 10px;
+        bottom: 10px;
     }
 }

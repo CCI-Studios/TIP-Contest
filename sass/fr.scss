@@ -1,0 +1,106 @@
+[lang=fr]
+{
+    .header
+    {
+        .menu
+        {
+            font-size: 0.8em;
+            
+            li
+            {
+                margin: 0 10px;
+            }
+            .last
+            {
+                margin-right: 20px;
+            }
+        }
+    }
+    .section .scroll
+    {
+        line-height: 1;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    [lang=fr]
+    {
+        .header .menu
+        {
+            ul
+            {
+                padding: 17px 0;
+                float: right;
+                margin-right: 100px;
+            }
+            li
+            {
+                float: none;
+                display: block;
+            }
+            a
+            {
+                margin: 8px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    [lang=fr]
+    {
+        .header
+        {
+            height:  auto;
+            padding: 0;
+            
+            .logo
+            {
+                float: none;
+                text-align: center;
+                line-height: 100px;
+                padding-top: 30px;
+            }
+            .menu
+            {
+                ul
+                {
+                    float: none;
+                    width: 180px;
+                    margin: 0 auto;
+                    padding-top: 0;
+                }
+                li
+                {
+                    margin: 0;
+                }
+            }
+            .lang
+            {
+                top: 10px;
+                right: auto;
+                left: 20px;
+                margin-right: 0;
+                margin-left: -6px;
+            }
+        }
+        .popup h2
+        {
+            font-size: 1.8em;
+        }
+    }
+}
+
+@media screen and (max-height: 960px)
+{
+    [lang=fr]
+    {
+        .section1 .scroll
+        {
+            display: none;
+        }
+    }
+}
