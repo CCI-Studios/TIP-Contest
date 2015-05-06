@@ -3,7 +3,7 @@ $(function(){
     resize();
     $(window).on("load resize", resize);
     $(".scroll a").on("click", scrollDown);
-    
+    $(".menu a").on("click", menuClick)
     
     function resize()
     {
@@ -51,5 +51,21 @@ $(function(){
     function disableSnap()
     {
         $("body").panelSnap('disable');
+    }
+    
+    function menuClick()
+    {
+        if ($(this).attr("href").charAt(0) == '#')
+        {
+            var top = $("#"+$(this).attr("href").substr(1)).offset().top - 150;
+            if (top == 0 && $("body").scrollTop() == 0)
+            {
+                top = 50;
+            }
+            $("html, body").animate({
+                scrollTop: top+"px"
+            }, 400);
+            return false;
+        }
     }
 });
