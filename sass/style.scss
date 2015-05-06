@@ -48,13 +48,13 @@ strong
 
 .page-wrapper
 {
-    padding-top: 175px;
+    padding-top: 150px;
     overflow: hidden;
 }
 
 .header
 {
-    height: 175px;
+    height: 150px;
     background: white;
     text-transform: uppercase;
     position: fixed;
@@ -68,7 +68,7 @@ strong
     .logo
     {
         float: left;
-        line-height: 175px;
+        line-height: 150px;
         
         img
         {
@@ -82,7 +82,7 @@ strong
         {
             list-style: none;
             float: right;
-            padding: 76px 0;
+            padding: 63px 0;
         }
         li
         {
@@ -620,7 +620,7 @@ strong
             }
             a
             {
-                margin: 8px 0;
+                margin: 5px 0;
             }
         }    
     }

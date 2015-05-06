@@ -7,7 +7,7 @@ $(function(){
     
     function resize()
     {
-        var h = $(window).height() - 175;
+        var h = $(window).height() - 150;
         $(".section").css("min-height",h+"px").find("> div > div").each(function(){
             var p = (h - $(this).height() - 80) / 2;
             $(this).css("padding", p+"px 0");
@@ -24,7 +24,7 @@ $(function(){
     }
     function scrollDown()
     {
-        var top = $(".section2").position().top - 175;
+        var top = $(".section2").position().top - 150;
         $("html, body").animate({
             scrollTop: top+"px"
         });
@@ -35,7 +35,7 @@ $(function(){
     {
         $("body").panelSnap({
             panelSelector: ".section",
-            offset: 175,
+            offset: 150,
             keyboardNavigation: {
                 enabled: true
             },
