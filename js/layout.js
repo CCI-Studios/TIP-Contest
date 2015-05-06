@@ -39,7 +39,7 @@ $(function(){
             keyboardNavigation: {
                 enabled: true
             },
-            directionThreshold: 250,
+            directionThreshold: 180,
             easing: 'swing',
             slideSpeed: 300
         });

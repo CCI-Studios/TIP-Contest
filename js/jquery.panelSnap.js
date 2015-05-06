@@ -164,6 +164,7 @@ if ( typeof Object.create !== 'function' ) {
       var panelCount = self.getPanel().length - 1;
 
       var childNumber;
+      var maxScrollDifference = self.options.directionThreshold + self.getPanel('.active').height() - $(window).height() + self.options.offset;
       if(
         self.enabled &&
         scrollDifference < -self.options.directionThreshold &&
@@ -172,7 +173,7 @@ if ( typeof Object.create !== 'function' ) {
         childNumber = Math.floor(offset / self.scrollInterval);
       } else if(
         self.enabled &&
-        scrollDifference > self.options.directionThreshold &&
+        scrollDifference > maxScrollDifference &&
         scrollDifference < self.scrollInterval
       ) {
         childNumber = Math.ceil(offset / self.scrollInterval);
@@ -213,8 +214,8 @@ if ( typeof Object.create !== 'function' ) {
       var self = this;
       var $window = $(window);
 
-      var viewport = { top: $window.scrollTop() };
-      viewport.bottom = viewport.top + $window.height();
+      var viewport = { top: $window.scrollTop()+self.options.offset };
+      viewport.bottom = viewport.top + $window.height() - self.options.offset;
 
       var panels = self.getPanel().filter(function (_, el) {
         var $el = $(el);
@@ -336,11 +337,10 @@ if ( typeof Object.create !== 'function' ) {
       self.options.onSnapStart.call(self, $target);
       self.$container.trigger('panelsnap:start', [$target]);
 
-      var scrollTarget = 0;
-      if(self.$container.is('body')) {
-        scrollTarget = $target.offset().top - self.options.offset;
-      } else {
-        scrollTarget = self.$snapContainer.scrollTop() + $target.position().top - self.options.offset;
+      var scrollTarget = $target.offset().top - self.options.offset;
+      if (self.$snapContainer.scrollTop() > $target.offset().top + $target.height() - $(window).height())
+      {
+          scrollTarget = $target.position().top + $target.height() - $(window).height();
       }
 
       self.$snapContainer.stop(true).delay(self.options.delay).animate({
@@ -349,7 +349,7 @@ if ( typeof Object.create !== 'function' ) {
 
         // Set scrollOffset to scrollTop
         // (not to scrollTarget since on iPad those sometimes differ)
-        self.scrollOffset = self.$snapContainer.scrollTop();
+        self.scrollOffset = $target.offset().top - self.options.offset;
         self.isSnapping = false;
 
         // Call callback
