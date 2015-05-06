@@ -486,8 +486,9 @@ strong
     right: auto;
     width: 750px;
     margin-left: -425px;
-    bottom: auto;
-    top: 12%;
+    top: 50%;
+    height: 650px;
+    margin-top: -365px;
     
     & > div
     {
@@ -591,7 +592,7 @@ strong
 
 @media screen and (max-width: 1240px)
 {
-    .section2 .infographic
+    .section2
     {
         &:before, &:after
         {
