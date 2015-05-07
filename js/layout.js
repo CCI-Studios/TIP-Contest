@@ -3,7 +3,7 @@ $(function(){
     resize();
     $(window).on("load resize", resize);
     $(".scroll a").on("click", scrollDown);
-    $(".menu a").on("click", menuClick)
+    $(".header a").on("click", menuClick)
     
     function resize()
     {
