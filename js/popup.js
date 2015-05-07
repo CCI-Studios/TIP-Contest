@@ -3,6 +3,7 @@ $(function(){
     $(".popup").on("click", ".close", close);
     $(".popup-overlay").on("click", close);
     $(".popup-link").on("click", popupLinkClick);
+    $(window).on("resize", resizeSignup);
     
     function popupLinkClick()
     {
@@ -14,11 +15,14 @@ $(function(){
     {
         $(".popup."+popupName).fadeIn(800).find("input").first().focus();
         openOverlay();
+        $("body").panelSnap('disable');
+        resizeSignup();
     }
     function close()
     {
         $(".popup").fadeOut(200);
         closeOverlay();
+        $("body").panelSnap('enable');
         return false;
     }
     function openOverlay()
@@ -28,5 +32,17 @@ $(function(){
     function closeOverlay()
     {
         $(".popup-overlay").fadeOut(200);
+    }
+    
+    function resizeSignup()
+    {
+        if ($(".signup").outerHeight() > $(window).height())
+        {
+            $(".signup").addClass("absolute");
+        }
+        else
+        {
+            $(".signup").removeClass("absolute");
+        }
     }
 });

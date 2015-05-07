@@ -13,7 +13,7 @@ $(function(){
             $(this).css("padding", p+"px 0");
         });
         
-        if ($(window).width() >= 720)
+        if ($(window).width() > 768 && $(window).height() > 768)
         {
             enableSnap();
         }

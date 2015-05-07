@@ -487,8 +487,17 @@ strong
     width: 750px;
     margin-left: -425px;
     top: 50%;
-    height: 650px;
-    margin-top: -365px;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    &.absolute
+    {
+        position: absolute;
+        top: 150px;
+        transform: none;
+    }
     
     & > div
     {
@@ -691,12 +700,8 @@ strong
     }
     .signup
     {
+        top: 50%;
         bottom: auto;
-        
-        & > div
-        {
-            overflow: scroll;
-        }
     }
 }
 
@@ -740,10 +745,6 @@ strong
                 display: none;
             }
         }
-    }
-    .signup
-    {
-        bottom: 20px;
     }
 }
 
@@ -869,11 +870,16 @@ strong
     {
         display: none;
     }
+}
+
+@media (max-width: 768px), (max-height: 768px)
+{
     .signup
     {
-        top: 10px;
-        bottom: 10px;
-        margin-top: 0;
-        height: auto;
+        position: absolute;
+        top: 150px;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none;
     }
 }
