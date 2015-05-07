@@ -9,9 +9,13 @@ $(function(){
     }
     else
     {
-        $form.on("submit", onsubmit);
+        $form.on("submit", onvalidatesubmit);
     }
     
+    function onvalidatesubmit()
+    {
+        return onsubmit(this);
+    }
     function onsubmit(form)
     {
         $.post("signup.php", $(form).serialize());
