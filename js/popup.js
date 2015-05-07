@@ -17,6 +17,10 @@ $(function(){
         openOverlay();
         $("body").panelSnap('disable');
         resizeSignup();
+        if ($(".popup."+popupName).offset().top + $(window).height() < $("body").scrollTop())
+        {
+            $("html, body").scrollTop(150);
+        }
     }
     function close()
     {
