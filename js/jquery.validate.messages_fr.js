@@ -8,7 +8,7 @@ jQuery.extend(jQuery.validator.messages, {
         email: "Veuillez entrer une adresse email valide.",
         url: "Veuillez entrer une URL valide.",
         date: "Veuillez entrer une date valide.",
-        dateISO: "Veuillez entrer une date valide (ISO).",
+        dateISO: "Veuillez entrer une date valide (yyyy-m-d).",
         number: "Veuillez entrer un nombre valide.",
         digits: "Veuillez entrer (seulement) une valeur numérique.",
         creditcard: "Veuillez entrer un numéro de carte de crédit valide.",

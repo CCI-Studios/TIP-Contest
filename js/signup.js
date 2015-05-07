@@ -4,7 +4,12 @@ $(function(){
     {
         $form.validate({
             submitHandler: onsubmit,
-            errorPlacement: errorPlacement
+            errorPlacement: errorPlacement,
+            rules: {
+                date_of_birth: {
+                    dateISO: true
+                }
+            }
         });
     }
     else
