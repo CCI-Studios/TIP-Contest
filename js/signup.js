@@ -1,10 +1,20 @@
 $(function(){
-    $(".signup form").on("submit", onsubmit);
-    
-    function onsubmit()
+    var $form = $(".signup form");
+    if (!Modernizr.input.required || !Modernizr.formvalidation)
     {
-        $.post("signup.php", $(this).serialize());
-        $(this).html("<p>Thank you! [INSERT CONTENT HERE]</p>");
+        $form.validate({
+            submitHandler : onsubmit
+        });
+    }
+    else
+    {
+        $form.on("submit", onsubmit);
+    }
+    
+    function onsubmit(form)
+    {
+        $.post("signup.php", $(form).serialize());
+        $(form).html("<p>Thank you! [INSERT CONTENT HERE]</p>");
         return false;
     }
 });
