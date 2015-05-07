@@ -57,7 +57,7 @@ $(function(){
     {
         if ($(this).attr("href").charAt(0) == '#')
         {
-            var top = $("#"+$(this).attr("href").substr(1)).offset().top - 150;
+            var top = $("#"+$(this).attr("href").substr(1)).offset().top - parseInt($(".page-wrapper").css("padding-top"));
             if (top == 0 && $("body").scrollTop() == 0)
             {
                 top = 50;
