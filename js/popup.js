@@ -7,6 +7,10 @@ $(function(){
     
     function popupLinkClick()
     {
+        if ($(this).parents(".popup").length)
+        {
+            close();
+        }
         open($(this).data("popup"));
         return false;
     }

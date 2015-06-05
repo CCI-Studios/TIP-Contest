@@ -21,6 +21,11 @@
         line-height: 1;
         bottom: 0;
     }
+    .signup label span
+    {
+        line-height: normal;
+        padding-top: 3px;
+    }
 }
 
 @media screen and (max-width: 1000px)
