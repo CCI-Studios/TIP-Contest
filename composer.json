@@ -1,0 +1,6 @@
+{  
+  "require": {
+    "sendgrid/sendgrid": "~3.2",
+    "drewm/mailchimp-api": "dev-master"
+  }
+}

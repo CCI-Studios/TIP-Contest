@@ -20,4 +20,7 @@ else
 
 define('MAILCHIMP_API_KEY', '');
 define('MAILCHIMP_LIST_ID', '');
+
+define('SENDGRID_USERNAME', '');
+define('SENDGRID_PASSWORD', '');
 ?>

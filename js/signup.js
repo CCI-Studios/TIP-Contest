@@ -23,8 +23,24 @@ $(function(){
     }
     function onsubmit(form)
     {
-        $.post("signup.php", $(form).serialize());
-        $(form).html("<p>Thank you! [INSERT CONTENT HERE]</p>");
+        $.post("signup.php", $(form).serialize(), function(response){
+            if (response.error && response.error == "email")
+            {
+                if ($("html").attr("lang") == "en")
+                {
+                    $(form).html("<p>This email address has alreay been registered.</p>");
+                }
+                else
+                {
+                    $(form).html("<p>FRANCAIS FRANCAIS This email address has alreay been registered.</p>");
+                }
+            }
+            else
+            {
+                $(form).html("<p>Thank you! Merci!</p>");
+            }
+        }, "json");
+        $(form).html("<p>Working...</p>");
         return false;
     }
     function errorPlacement(error, element)
