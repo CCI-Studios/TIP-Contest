@@ -28,11 +28,11 @@ $(function(){
             {
                 if ($("html").attr("lang") == "en")
                 {
-                    $(form).html("<p>This email address has alreay been registered.</p>");
+                    $(form).html("<p>This email address has already been registered.</p>");
                 }
                 else
                 {
-                    $(form).html("<p>FRANCAIS FRANCAIS This email address has alreay been registered.</p>");
+                    $(form).html("<p>L’adresse email est déjà enregistrée.</p>");
                 }
             }
             else

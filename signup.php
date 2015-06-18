@@ -101,20 +101,40 @@ $message = new SendGrid\Email();
 if ($lang == 'en')
 {
     $subject = 'Welcome to TIP';
-    $text = 'Thank you for visiting nailfungus.ca and for signing up to the Toenail Fungus Information Program (TIP). We look forward to providing you with new and useful information to help you manage your condition. To complement the nailfungus.ca website, we are happy to provide you access to a new booklet about toenail fungus infections. To download a copy of Your Complete Guide to Toenail Fungus Infections, please click here.
+    $text = '
+    Thank you for visiting nailfungus.ca and for signing up to the Toenail Fungus Information Program (TIP). We look forward to providing you with new and useful information to help you manage your condition.
+    To complement the nailfungus.ca website, we are happy to provide you access to a new booklet about toenail fungus infections. To download a copy of Your Complete Guide to Toenail Fungus Infections, please click here.
     http://toenailfungusinformationprogram.ca/pdf/TIP_Guide.pdf
-    If you have indicated that you would like to receive a copy of the guide by mail, please allow four to six weeks for delivery. As a reminder, your family doctor, dermatologist or podiatrist are the medical experts to speak to when it comes to the diagnosis and treatment of toenail fungus infections. Start off on the right foot by consulting your doctor if you suspect you have a toenail fungus infection. You may unsubscribe from the TIP program at any time. To unsubscribe, click here.
-    mailto:info@toenailinformationprogram.ca';
-    $html = '<p>Thank you for visiting nailfungus.ca and for signing up to the Toenail Fungus Information Program (TIP). We look forward to providing you with new and useful information to help you manage your condition.</p>
+    If you have indicated that you would like to receive a copy of the guide by mail, please allow four to six weeks for delivery. 
+    As a reminder, your family doctor, dermatologist or podiatrist are the medical experts to speak to when it comes to the diagnosis and treatment of toenail fungus infections. Start off on the right foot by consulting your doctor if you suspect you have a toenail fungus infection.
+    You may unsubscribe from TIP at any time. To unsubscribe, click here.
+    mailto:info@toenailfungusinformationprogram.ca
+    ';
+    $html = '
+    <p>Thank you for visiting nailfungus.ca and for signing up to the Toenail Fungus Information Program (TIP). We look forward to providing you with new and useful information to help you manage your condition.</p>
     <p>To complement the nailfungus.ca website, we are happy to provide you access to a new booklet about toenail fungus infections. To download a copy of <strong>Your Complete Guide to Toenail Fungus Infections,</strong> <a href="http://toenailfungusinformationprogram.ca/pdf/TIP_Guide.pdf">please click here</a>. If you have indicated that you would like to receive a copy of the guide by mail, please allow four to six weeks for delivery.</p>
-    <p>As a reminder, your family doctor, dermatologist or podiatrist are the medical experts to speak to when it comes to the diagnosis and treatment of toenail fungus infections. Start off on the right foot by consulting your doctor if you suspect you have a toenail fungus infection.</p>
-    <p><em>You may unsubscribe from the TIP program at any time. To unsubscribe, <a href="mailto:info@toenailfungusinformationprogram.ca">click here</a>.</em></p>';
+    <p>As a reminder, your <strong>family doctor</strong>, <strong>dermatologist</strong> or <strong>podiatrist</strong> are the medical experts to speak to when it comes to the diagnosis and treatment of toenail fungus infections. Start off on the right foot by consulting your doctor if you suspect you have a toenail fungus infection.</p>
+    <p><em>You may unsubscribe from TIP at any time. To unsubscribe, <a href="mailto:info@toenailfungusinformationprogram.ca">click here</a>.</em></p>
+    ';
 }
 else
 {
-    $subject = 'Bienvenue';
-    $text = 'Je mappele Maurice';
-    $html = 'Je mappele Maurice';
+    $subject = 'Bienvenue au PIMO';
+    $text = '
+    Merci d\'avoir visité mycosedesongles.quebec et de vous être inscrit au Programme sur la mycose des ongles d\'orteils (PIMO). Nous sommes heureux de pouvoir vous offrir de nouveaux renseignements utiles qui vous aideront à gérer votre condition.
+    Nous sommes ravis de vous offrir l\'accès à une nouvelle brochure sur la mycose des ongles d\'orteils, complément au site mycosedesongles.quebec. Cliquez ici pour télécharger votre copie de Votre guide complet sur la mycose des ongles d\'orteils.
+    http://toenailfungusinformationprogram.ca/pdf/PIMO_Guide.pdf
+    Si vous avez indiqué que vous désirez recevoir celui-ci par la poste, veuillez prévoir 4 à 6 semaines pour la livraison.
+    Nous vous rappelons que votre médecin de famille, votre dermatologue et votre podologue sont des experts médicaux. Il est important de discuter avec eux en ce qui concerne les diagnostiques et les traitements pour la mycose des ongles d\'orteils. Partez du bon pied, consultez votre docteur si vous croyez avoir une infection fongique des ongles d\'orteils.
+    Vous pouvez vous désabonner du PIMO en tout temps. Pour vous désabonner, cliquez ici.
+    mailto:info@toenailfungusinformationprogram.ca
+    ';
+    $html = '
+    <p>Merci d\'avoir visité mycosedesongles.quebec et de vous être inscrit au Programme sur la mycose des ongles d\'orteils (PIMO). Nous sommes heureux de pouvoir vous offrir de nouveaux renseignements utiles qui vous aideront à gérer votre condition.</p>
+    <p>Nous sommes ravis de vous offrir l\'accès à une nouvelle brochure sur la mycose des ongles d\'orteils, complément au site mycosedesongles.quebec. <a href="http://toenailfungusinformationprogram.ca/pdf/PIMO_Guide.pdf">Cliquez ici</a> pour télécharger <em>votre copie de Votre guide complet sur la mycose des ongles d\'orteils</em>. Si vous avez indiqué que vous désirez recevoir celui-ci par la poste, veuillez prévoir 4 à 6 semaines pour la livraison.</p>
+    <p>Nous vous rappelons que votre médecin de famille, votre dermatologue et votre podologue sont des experts médicaux. Il est important de discuter avec eux en ce qui concerne les diagnostiques et les traitements pour la mycose des ongles d\'orteils. Partez du bon pied, consultez votre docteur si vous croyez avoir une infection fongique des ongles d\'orteils.</p>
+    <p><em>Vous pouvez vous désabonner du PIMO en tout temps. Pour vous désabonner, <a href="mailto:info@toenailfungusinformationprogram.ca">cliquez ici</a>.</em></p>
+    ';
 }
 $message
     ->addTo($email)
