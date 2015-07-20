@@ -148,7 +148,40 @@ try
     $sendgrid->send($message);
 }
 catch(\SendGrid\Exception $e) {}
-
+    
+$message = new SendGrid\Email();
+$subject = 'TIP Registration - ';
+if ($receive_guide)
+{
+    $subject .= 'Print';
+}
+else
+{
+    $subject .= 'Digital Only';
+}
+$text = "first name: $first_name 
+last name: $last_name 
+address: $address 
+city: $city
+province: $province 
+postal code: $postal_code 
+telephone: $telephone
+email: $email 
+date of birth: $date_of_birth 
+receive info: $receive_info
+receive printed guide: $receive_guide
+language: $lang";
+$message
+    ->addTo('info@toenailfungusinformationprogram.ca')
+    ->setFrom('info@toenailfungusinformationprogram.ca')
+    ->setSubject($subject)
+    ->setText($text)
+;
+try
+{
+    $sendgrid->send($message);
+}
+catch(\SendGrid\Exception $e) {}
 
 echo json_encode(array('success'=>1));
 ?>
