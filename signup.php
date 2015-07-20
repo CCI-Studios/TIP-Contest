@@ -4,7 +4,7 @@ if ($_POST['website']) exit;
 
 require('config.php');
 
-$db = new PDO(MYSQL_DSN, MYSQL_USER, MYSQL_PASS);
+$db = new PDO(MYSQL_DSN . ';charset=utf8', MYSQL_USER, MYSQL_PASS);
 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
