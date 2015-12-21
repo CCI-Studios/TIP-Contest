@@ -34,6 +34,11 @@ a
 {
     text-decoration: underline;
     font-weight: bold;
+    
+    img
+    {
+        border: 0;
+    }
 }
 
 strong
@@ -484,6 +489,7 @@ strong
     bottom: auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     
     &.absolute
@@ -879,6 +885,7 @@ strong
         top: 150px;
         -webkit-transform: none;
         -moz-transform: none;
+        -ms-transform: none;
         transform: none;
     }
 }
