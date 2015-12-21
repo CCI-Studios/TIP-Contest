@@ -16,7 +16,7 @@ body
     padding: 0;
     background: white;
     line-height: 1.4;
-    color: #2f2e72;
+    color: #522f91;
     font-size: 16px;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -92,16 +92,16 @@ strong
         }
         a
         {
-            color: #2f2e72;
+            color: #522f91;
             font-weight: bold;
-            border-bottom: 1px solid #4591ce;
+            border-bottom: 1px solid #00b4ca;
             text-decoration: none;
             display: inline-block;
             padding: 0 3px;
             
             &:hover
             {
-                color: #4591ce;
+                color: #9784be;
             }
         }
     }
@@ -126,11 +126,11 @@ strong
         }
         .first
         {
-            border-right: 1px solid #666;
+            border-right: 1px solid #00b4ca;
         }
         a
         {
-            color: #666;
+            color: #9784be;
             text-decoration: none;
             
             &:hover
@@ -140,7 +140,7 @@ strong
         }
         .active a
         {
-            color: #4591ce;
+            color: #522f91;
         }
     }
 }
@@ -152,7 +152,7 @@ strong
 
 .section1
 {
-    background: url(../img/bg-section1.png) no-repeat center center;
+    background: url(../img/bg-section1.jpg?20151221) no-repeat center center;
     background-size: cover;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
@@ -211,7 +211,7 @@ strong
             display: block;
             text-align: center;
             padding-bottom: 60px;
-            background: url(../img/icon-scroll-down.svg) no-repeat bottom center;
+            background: url(../img/icon-scroll-down.svg?20151221) no-repeat bottom center;
             -webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.2));
             filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.2));
         }
@@ -229,14 +229,10 @@ strong
         font-size: 2.4em;
         line-height: 1;
     }
-    .blue-light
-    {
-        color: #4591ce;
-    }
     
     a
     {
-        color: #2f2e72;
+        color: #522f91;
         text-decoration: underline;
     }
     
@@ -256,7 +252,7 @@ strong
         top: 200px;
         width: 257px;
         height: 322px;
-        background: url(../img/infographic-circles.png) no-repeat top left;
+        background: url(../img/infographic-circles.png?20151221) no-repeat top left;
     }
     &:after
     {
@@ -267,7 +263,7 @@ strong
         top: 700px;
         width: 284px;
         height: 301px;
-        background: url(../img/infographic-circles2.png) no-repeat top left;
+        background: url(../img/infographic-circles2.png?20151221) no-repeat top left;
     }
     
     .infographic
@@ -338,11 +334,10 @@ strong
 
 .section3
 {
-    background: url(../img/beach.jpg) no-repeat center center;
+    background: url(../img/beach.jpg?20151221) no-repeat center center;
     background-size: cover;
-    color: white;
+    color: #522f91;
     font-weight: 400;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.75);
     
     & > div
     {
@@ -358,14 +353,13 @@ strong
     
     a
     {
-        color: white;
+        color: #522f91;
     }
-    
     h2
     {
         line-height: 0.9;
         font-size: 2.4em;
-        color: white;
+        color: #522f91;
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 30px;
@@ -403,13 +397,13 @@ strong
     
     a
     {
-        color: #2f2e72;
+        color: #522f91;
     }
     
     h2
     {
         text-transform: uppercase;
-        color: #2f2e72;
+        color: #522f91;
         font-weight: 300;
         font-size: 2.4em;
         padding-bottom: 25px;
@@ -417,8 +411,7 @@ strong
     }
     h3
     {
-        color: #2f2e72;
-        text-decoration: underline;
+        color: #522f91;
         font-size: 0.9em;
         padding-bottom: 6px;
     }
@@ -441,7 +434,7 @@ strong
         height: 32px;
         font-size: 0;
         text-decoration: none;
-        background: url(../img/icon-close.svg) no-repeat top left;
+        background: url(../img/icon-close.svg?20151221) no-repeat top left;
     }
 }
 .privacy
@@ -449,10 +442,6 @@ strong
     p
     {
         font-size: 0.9em;
-    }
-    a
-    {
-        color: #4591ce;
     }
 }
 .rules
@@ -464,7 +453,7 @@ strong
     ol
     {
         margin-left: 30px;
-        color: #2f2e72;
+        color: #522f91;
         font-weight: bold;
         
         p
@@ -583,7 +572,7 @@ strong
         line-height: 40px;
         -webkit-appearance: none;
         border: 0;
-        background: #4690cd;
+        background: #522f91;
         border-radius: 20px;
         cursor: pointer;
         margin-top: 20px;

@@ -2,10 +2,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="31.99px" height="31.99px" viewBox="0 0 31.99 31.99" enable-background="new 0 0 31.99 31.99" xml:space="preserve">
-<path fill-rule="evenodd" clip-rule="evenodd" fill="#2E2F72" d="M4.68,27.31c-6.239-6.239-6.239-16.391,0-22.63
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#522f91" d="M4.68,27.31c-6.239-6.239-6.239-16.391,0-22.63
 	s16.391-6.239,22.63,0c6.24,6.24,6.24,16.393,0.001,22.632C21.072,33.551,10.919,33.55,4.68,27.31z"/>
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M26.272,5.718c-5.667-5.667-14.887-5.667-20.554,0
 	c-5.667,5.667-5.667,14.887,0,20.554c5.667,5.667,14.889,5.668,20.556,0.001C31.94,20.606,31.94,11.385,26.272,5.718z"/>
-<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#2E2F72" points="11.88,21.461 10.529,20.11 14.644,15.995 10.529,11.88 
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#522f91" points="11.88,21.461 10.529,20.11 14.644,15.995 10.529,11.88 
 	11.88,10.529 15.995,14.644 20.11,10.529 21.461,11.88 17.346,15.995 21.459,20.109 20.109,21.46 15.995,17.346 "/>
 </svg>
