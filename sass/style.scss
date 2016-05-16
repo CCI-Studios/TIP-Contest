@@ -233,6 +233,8 @@ strong
         font-weight: 300;
         font-size: 2.4em;
         line-height: 1;
+        position: relative;
+        z-index: 1;
     }
     
     a
@@ -275,40 +277,61 @@ strong
     {
         text-align: center;
         position: relative;
-        padding-bottom: 8%;
+        margin-top: -120px;
+        padding-bottom: 30%;
         min-height: 480px;
+        background: url(../img/map.svg) no-repeat top center;
+        background-size: contain;
         
         .map
         {
             max-width: 100%;
             height: auto;
         }
-        .didyouknow
+        .infographic1
         {
-            width: 46.171%;
+            width: 37.34%;
             min-width: 280px;
             height: auto;
             position: absolute;
             right: 0;
             top: -8px;
         }
-        .embarrassed
+        .infographic2
         {
-            width: 47.5%;
+            width: 36.28%;
             min-width: 280px;
             height: auto;
             position: absolute;
             left: 0;
-            bottom: 25%;
+            top: 25%;
         }
-        .sandals
+        .infographic3
         {
-            width: 47.5%;
+            width: 39.47%;
+            min-width: 280px;
+            height: auto;
+            position: absolute;
+            left: 46%;
+            top: 48%;
+        }
+        .infographic4
+        {
+            width: 46.06%;
+            min-width: 280px;
+            height: auto;
+            position: absolute;
+            left: 10%;
+            top: 70%;
+        }
+        .infographic5
+        {
+            width: 34.15%;
             min-width: 280px;
             height: auto;
             position: absolute;
             right: 0;
-            bottom: 0;
+            top: 80%;
         }
     }
     
@@ -339,20 +362,24 @@ strong
 
 .section3
 {
-    background: url(../img/beach.jpg?20151221) no-repeat center center;
+    background: url(../img/beach.jpg?20160515) no-repeat center center;
     background-size: cover;
     color: #522f91;
     font-weight: 400;
+    padding-top: 100px;
+    box-sizing: border-box;
     
     & > div
     {
-        padding: 40px 20px;
+        padding: 40px 60px;
         max-width: 940px;
         margin: 0 auto;
+        background: white;
+        background: rgba(255,255,255,0.85);
         
         & > div
         {
-            max-width: 505px;
+            padding: 0 !important;
         }
     }
     
@@ -368,6 +395,7 @@ strong
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 30px;
+        text-align: center;
     }
     h3
     {
@@ -653,11 +681,6 @@ strong
     {
         margin-top: 0;
     }
-    .popup
-    {
-        left: 10%;
-        right: 10%;
-    }
 }
 
 @media screen and (max-width: 880px)
@@ -689,6 +712,13 @@ strong
     .header
     {
         position: relative;
+    }
+    .section2 .infographic
+    {
+        .infographic4
+        {
+            left: 0;
+        }
     }
     .popup
     {
@@ -732,10 +762,47 @@ strong
     }
     .section2
     {
-        .infographic .map
+        h2
         {
-            position: relative;
-            top: 125px;
+            font-size: 2em;
+        }
+        .infographic
+        {
+            min-height: 0;
+            overflow: hidden;
+            padding-bottom: 0;
+            background: none;
+            
+            .infographic1
+            {
+                position: relative;
+                z-index: 1;
+                float: right;
+                clear: both;
+                top: 0;
+                margin-bottom: 1em;
+            }
+            .infographic2,
+            .infographic3,
+            .infographic4,
+            .infographic5
+            {
+                position: relative;
+                z-index: 1;
+                float: left;
+                clear: left;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin-bottom: 1.5em;
+            }
+            .infographic3,
+            .infographic5
+            {
+                float: right;
+                clear: right;
+            }
         }
         .guide
         {
@@ -751,6 +818,7 @@ strong
             }
         }
     }
+    
 }
 
 
@@ -769,45 +837,17 @@ strong
     }
     .section2
     {
-        .infographic
-        {
-            min-height: 0;
-            overflow: hidden;
-            padding-bottom: 0;
-            
-            .map
-            {
-                position: absolute;
-                width: 100%;
-                height: auto;
-                left: 0;
-                top: 50%;
-                z-index: 0;
-            }
-            .didyouknow
-            {
-                position: relative;
-                z-index: 1;
-                float: right;
-                top: 0;
-                margin-bottom: 1em;
-            }
-            .embarrassed
-            {
-                position: relative;
-                z-index: 1;
-                float: left;
-            }
-            .sandals
-            {
-                position: relative;
-                z-index: 1;
-                float: right;
-            }
-        }
+        
         .guide p
         {
             padding: 0;
+        }
+    }
+    .section3
+    {
+        & > div
+        {
+            padding: 60px 20px;
         }
     }
     .signup
