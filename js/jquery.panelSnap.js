@@ -221,8 +221,7 @@ if ( typeof Object.create !== 'function' ) {
         var $el = $(el);
         var bounds = $el.offset();
         bounds.bottom = bounds.top + $el.outerHeight();
-
-        return !(viewport.bottom < bounds.top || viewport.top > bounds.bottom);
+        return !(viewport.bottom <= bounds.top || viewport.top >= bounds.bottom);
       });
 
       return panels;
