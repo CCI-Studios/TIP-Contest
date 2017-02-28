@@ -1,2 +1,6 @@
 RewriteEngine on
 RewriteRule ^fr fr.html
+RewriteCond %{HTTP_HOST} ^www\.toenailfungusinformationprogram\.ca [NC]
+RewriteRule ^(.*)$ http://toenailfungusinformationprogram.ca/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.programmedinformationmycosedesonglesdorteil\.ca [NC]
+RewriteRule ^(.*)$ http://programmedinformationmycosedesonglesdorteil.ca/$1 [L,R=301]
