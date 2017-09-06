@@ -28,19 +28,33 @@ $(function(){
             {
                 if ($("html").attr("lang") == "en")
                 {
-                    $(form).html("<p>This email address has already been registered.</p>");
+                    $(form).find(".messages").html("<p>This email address has already been registered.</p>");
                 }
                 else
                 {
-                    $(form).html("<p>L’adresse email est déjà enregistrée.</p>");
+                    $(form).find(".messages").html("<p>L’adresse email est déjà enregistrée.</p>");
                 }
+                $(form).find(".content").show();
+            }
+            else if (response.error && response.error == "required_fields")
+            {
+                if ($("html").attr("lang") == "en")
+                {
+                    $(form).find(".messages").html("<p>Missing required fields.</p>");
+                }
+                else
+                {
+                    $(form).find(".messages").html("<p>Missing required fields.</p>");
+                }
+                $(form).find(".content").show();
             }
             else
             {
-                $(form).html("<p>Thank you! Merci!</p>");
+                $(form).find(".messages").html("<p>Thank you! Merci!</p>");
             }
         }, "json");
-        $(form).html("<p>Working...</p>");
+        $(form).find(".content").hide();
+        $(form).find(".messages").html("<p>Working...</p>");
         return false;
     }
     function errorPlacement(error, element)

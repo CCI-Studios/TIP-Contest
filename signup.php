@@ -20,6 +20,12 @@ $receive_guide = (int)isset($_POST['receive_guide']);
 $lang = $_POST['lang'];
 $date = date('Y-m-d H:i:s');
 
+if (!$first_name || !$last_name || !$address || !$city || !$province || !$postal_code || !$email || !$date_of_birth)
+{
+  echo json_encode(array('error'=>'required_fields'));
+  exit;
+}
+
 $query = $db->prepare('SELECT * FROM entry WHERE email=:email');
 $query->bindParam(':email', $email);
 $query->execute();
